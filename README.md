@@ -1,6 +1,6 @@
 # Pachi Maze API
 
-API for planned PachiMari maze game. Initially just a leaderboard (no sign in to play. Think arcade machines.)
+WIP API for planned PachiMari maze game. Initially just a leaderboard (no sign in to play. Think arcade machines.)
 
 DB Setup:
 - in psql:
