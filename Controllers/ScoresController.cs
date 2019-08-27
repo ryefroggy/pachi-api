@@ -12,18 +12,18 @@ namespace PachiMaze.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ScoreController : ControllerBase
+    public class ScoresController : ControllerBase
     {
         private readonly PachiContext _context;
 
-        public ScoreController(PachiContext context)
+        public ScoresController(PachiContext context)
         {
             _context = context;
         }
 
         // GET: api/Scores
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Score>>> GetScores()
+        public async Task<ActionResult<IEnumerable<Score>>> GetScore()
         {
             return await _context.Score.ToListAsync();
         }
