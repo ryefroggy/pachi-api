@@ -25,7 +25,9 @@ namespace PachiMaze.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Score>>> GetScore()
         {
-            return await _context.Score.ToListAsync();
+            return await _context.Score
+                .FromSql("SELECT * FROM \"Score\" ORDER BY \"Value\" DESC")
+                .ToListAsync();
         }
 
         // GET: api/Scores/5
