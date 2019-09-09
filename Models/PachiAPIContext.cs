@@ -10,5 +10,6 @@ namespace PachiMaze.AspNetCore.NewDb.Models
             => optionsBuilder.UseNpgsql("Host=localhost;Database=pachimaze;Username=pachimaze;Password=null");
 
         public DbSet<Score> Score { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }
